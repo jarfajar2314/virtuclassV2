@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 const db = require("./models");
 
 if (process.env.NODE_ENV !== "production") {
-	// dbSync();
+	dbSync();
 } else {
 	db.sequelize.sync();
 }

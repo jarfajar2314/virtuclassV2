@@ -16,7 +16,7 @@ exports.signup = (req, res) => {
 
 	if (role == "siswa") {
 		Siswa.create({
-			nama: `${req.body.namaDepan} ${req.body.namaBelakang}`,
+			nama: req.body.nama,
 			asal_sekolah: req.body.asalSekolah,
 			jenis_kelamin: req.body.jenisKelamin,
 			email: req.body.email,
@@ -36,7 +36,7 @@ exports.signup = (req, res) => {
 			});
 	} else if (role == "guru") {
 		Guru.create({
-			nama: `${req.body.namaDepan} ${req.body.namaBelakang}`,
+			nama: req.body.nama,
 			email: req.body.email,
 			password: bcrypt.hashSync(req.body.password, 8),
 		})
