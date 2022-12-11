@@ -5,7 +5,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-12 flex">
                     <div class="wrap p-4">
                         <div class="row">
-                            <h2 class="title-1">John Doe</h2>
+                            <h2 class="title-1">Guru Kita</h2>
                             <h3 class="title-2 mt-4">SMA Negeri XX Bandung</h3>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                         </RouterLink>
                         <img class="flex" :src=profileLogo alt="">
                         <div class="text-center">
-                            <h3 class="mt-4">John Doe</h3>
+                            <h3 class="mt-4">Guru Kita</h3>
                             <h4>00000888833212</h4>
                             <h4>Perempuan</h4>
                         </div>
@@ -43,9 +43,8 @@
 </template>
 
 <script>
-
 export default {
-    name: 'UserProfile',
+    name: 'profileGuru',
     components: {
     },
     data() {
@@ -55,4 +54,4 @@ export default {
         }
     },
 }
-</script>
+</script>   
