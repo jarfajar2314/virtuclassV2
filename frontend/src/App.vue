@@ -34,6 +34,12 @@ export default {
   background-color: #991311 !important;
 }
 
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+}
+
 .title-1 {
   color: white;
   font-size: 60px;

@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/"><b>Home</b>&emsp;</RouterLink>
+                        <RouterLink class="nav-link" to="/">Home&emsp;</RouterLink>
                     </li>
                     <li class="nav-item">
                         <RouterLink class="nav-link" to="/course">Course&emsp;</RouterLink>

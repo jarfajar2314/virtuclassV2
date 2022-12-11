@@ -31,11 +31,18 @@ const router = createRouter({
       component: () => import('../views/User/CourseView.vue')
     },
     {
+      path: '/course/:id',
+      name: 'modul',
+      component: () => import('../views/User/ModulView.vue')
+    },
+    {
       path: '/faq',
       name: 'faq',
       component: () => import('../views/User/FaqView.vue')
     }
-  ]
+  ],
+  linkActiveClass: "active",
+  linkExactActiveClass: "exact-active",
 })
 
 export default router
