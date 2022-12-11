@@ -1,6 +1,9 @@
 const db = require("../models");
 const ROLES = db.ROLES;
 const User = db.user;
+const Siswa = db.siswa;
+const Guru = db.guru;
+const Admin = db.admin;
 
 checkDuplicateUsernameOrEmail = (req, res, next) => {
 	// Username
@@ -50,8 +53,40 @@ checkRolesExisted = (req, res, next) => {
 	next();
 };
 
+checkDuplicateEmail = (req, res, next) => {
+	Siswa.findOne({
+		where: {
+			email: req.body.email,
+		},
+	}).then((siswa) => {
+		if (siswa) {
+			res.status(400).send({
+				message: "Failed! Email is already in use!",
+			});
+			return;
+		}
+
+		// Email
+		Guru.findOne({
+			where: {
+				email: req.body.email,
+			},
+		}).then((guru) => {
+			if (guru) {
+				res.status(400).send({
+					message: "Failed! Email is already in use!",
+				});
+				return;
+			}
+
+			next();
+		});
+	});
+};
+
 const verifySignUp = {
 	checkDuplicateUsernameOrEmail: checkDuplicateUsernameOrEmail,
+	checkDuplicateEmail: checkDuplicateEmail,
 	checkRolesExisted: checkRolesExisted,
 };
 
