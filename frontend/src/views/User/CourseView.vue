@@ -1,12 +1,14 @@
 <template>
-    Course
+    <CardBlock />
 </template>
 
 <script>
+import CardBlock from '../../components/CardBlock.vue'
 
 export default {
-    name: 'LoginView',
+    name: 'CourseView',
     components: {
+        CardBlock
     }
 }
 </script>

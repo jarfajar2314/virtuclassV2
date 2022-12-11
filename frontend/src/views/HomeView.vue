@@ -306,7 +306,6 @@
         <p id="faq" class="mb-5"></p>
 
         <h3 class="mb-5 text-center">
-            <b style="color: #991311">VirtuClass:</b><br>
             <b>Frequently Ask Question</b>
         </h3>
 
@@ -321,7 +320,8 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5" style="background-color: white !important;">Syarat pertama, sekolah
+                    <div class="accordion-body p-5 text-start" style="background-color: white !important;">Syarat
+                        pertama, sekolah
                         kamu
                         harus sudah bekerja sama dengan kami terlebih dahulu. Kemudian, kalian bisa mendaftar langsung
                         di
@@ -338,7 +338,8 @@
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5" style="background-color: white !important;">Sejauh ini kami baru
+                    <div class="accordion-body p-5 text-start" style="background-color: white !important;">Sejauh ini
+                        kami baru
                         menyiapkan kelas fisika, kimia, matematika, dan bahasa inggris.</div>
                 </div>
             </div>
@@ -352,7 +353,8 @@
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5" style="background-color: white !important;">Sistem pembelajaran
+                    <div class="accordion-body p-5 text-start" style="background-color: white !important;">Sistem
+                        pembelajaran
                         virtuclass dilakukan secara daring (<i>online</i>) menggunakan media google meet atau zoom
                         dengan
                         materi belajar yang diintegrasikan menggunakan website virtuclass.</div>
@@ -368,7 +370,7 @@
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5" style="background-color: white !important;">Gratis.</div>
+                    <div class="accordion-body p-5 text-start" style="background-color: white !important;">Gratis.</div>
                 </div>
             </div>
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
@@ -382,7 +384,7 @@
                 <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
                     data-bs-parent="#accordionFlushExample">
                     <div class="accordion-body p-5" style="background-color: white !important;">
-                        <ul>
+                        <ul class="text-start" style="list-style-type: none;">
                             <li>Kamu termasuk murid dari sekolah yang bekerja sama dengan Virtuclass.id.</li>
                             <li>Kamu memiliki niat belajar yang tinggi.</li>
                             <li>Mengisi form pendaftaran.</li>
@@ -418,123 +420,3 @@ export default {
 }
 
 </script>
-
-<style>
-.header {
-    background-color: #991311 !important;
-}
-
-.title-1 {
-    color: white;
-    font-size: 60px;
-    font-weight: 400;
-    text-shadow: 4px 3px 9px rgba(0, 0, 0, 0.7);
-    line-height: 30px;
-}
-
-.title-2 {
-    color: white;
-    font-size: 23px;
-}
-
-.tombol {
-    text-decoration: none;
-    background-color: #FFFFFF;
-    height: 50px;
-    width: 62%;
-    border-radius: 20px;
-    font-weight: 700;
-    line-height: 41px;
-    text-align: center;
-    color: #991311;
-    border: 2px solid grey;
-}
-
-.tombol:hover {
-    color: #991311 !important;
-}
-
-.cards {
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.1);
-}
-
-.cardTop {
-    width: 100%;
-    background-color: #f5f5f5;
-    height: 125px;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-}
-
-.cardBottom {
-    width: 100%;
-    background-color: #f5f5f5;
-    height: 150px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-
-.space {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.pict {
-    width: 90%;
-    margin-top: -30%;
-}
-
-.reverse {
-    display: flex;
-    flex-direction: none;
-}
-
-.spaceContent {
-    padding: 5%;
-}
-
-.flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.box-carousel {
-    width: 70%;
-}
-
-@media (max-width: 700px) {
-
-    .title-1 {
-        font-size: 45px;
-        text-align: center;
-    }
-
-    .title-2 {
-        font-size: 17px;
-        text-align: center;
-    }
-
-    .reverse {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .tombol {
-        margin: 0 auto;
-    }
-
-    .pict {
-        width: 65%;
-        margin-top: -15%;
-    }
-
-    .space {
-        margin-top: 10%;
-        margin-bottom: 10%;
-    }
-}
-</style>

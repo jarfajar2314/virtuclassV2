@@ -3,7 +3,7 @@
         <div class="row m-5 mb-0 mt-3">
             <div class="col-lg-5 col-md-5 col-sm-12 p-4">
                 <p class="pb-2 pt-3" style="color: #901311; font-weight: bold;">
-                    About US
+                    About Us
                 </p>
                 <p style="font-size:13px; text-align: justify;">
                     VirtuClass hadir sebagai media belajar yang memiliki prinsip Belajar, Bercanda, dan Mengerti. Kami

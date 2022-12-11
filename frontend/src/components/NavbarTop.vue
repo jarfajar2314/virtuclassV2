@@ -2,9 +2,9 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5"
         style="box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.1);">
         <div class="container ps-4 pe-4">
-            <a class="navbar-brand" href="index.php">
+            <RouterLink class="navbar-brand" to="/">
                 <img :src="logoVirtu" alt="virtuclass-logo">
-            </a>
+            </RouterLink>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -18,10 +18,10 @@
                         <RouterLink class="nav-link" to="/course">Course&emsp;</RouterLink>
                     </li>
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/about">About&emsp;</RouterLink>
+                        <a class="nav-link" href="#about">About&emsp;</a>
                     </li>
                     <li class="nav-item">
-                        <RouterLink class="nav-link" to="/faq">FAQ&emsp;</RouterLink>
+                        <a class="nav-link" href="#faq">FAQ&emsp;</a>
                     </li>
                     <li class="nav-item p-0">
                         <div class="dropdown">
@@ -37,9 +37,9 @@
                                 </RouterLink>
                                 <RouterLink class="dropdown-item" to="/login">
                                     <span>
-                                        <Icon class='iconify-inline' icon="carbon:logout" />
+                                        <Icon class='iconify-inline' icon="carbon:login" />
                                     </span>
-                                    <span>Masuk</span>
+                                    <span class="ml-4">Masuk</span>
                                 </RouterLink>
                             </div>
                         </div>
