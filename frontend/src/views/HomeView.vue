@@ -320,7 +320,7 @@
                 </h2>
                 <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5 text-start" style="background-color: white !important;">Syarat
+                    <div class="accordion-body p-4 text-start" style="background-color: white !important;">Syarat
                         pertama, sekolah
                         kamu
                         harus sudah bekerja sama dengan kami terlebih dahulu. Kemudian, kalian bisa mendaftar langsung
@@ -338,7 +338,7 @@
                 </h2>
                 <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5 text-start" style="background-color: white !important;">Sejauh ini
+                    <div class="accordion-body p-4 text-start" style="background-color: white !important;">Sejauh ini
                         kami baru
                         menyiapkan kelas fisika, kimia, matematika, dan bahasa inggris.</div>
                 </div>
@@ -353,7 +353,7 @@
                 </h2>
                 <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5 text-start" style="background-color: white !important;">Sistem
+                    <div class="accordion-body p-4 text-start" style="background-color: white !important;">Sistem
                         pembelajaran
                         virtuclass dilakukan secara daring (<i>online</i>) menggunakan media google meet atau zoom
                         dengan
@@ -370,7 +370,7 @@
                 </h2>
                 <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5 text-start" style="background-color: white !important;">Gratis.</div>
+                    <div class="accordion-body p-4 text-start" style="background-color: white !important;">Gratis.</div>
                 </div>
             </div>
             <div class="accordion-item m-3" style="border: 1px solid lightgrey; border-radius: 10px;">
@@ -383,7 +383,7 @@
                 </h2>
                 <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
                     data-bs-parent="#accordionFlushExample">
-                    <div class="accordion-body p-5" style="background-color: white !important;">
+                    <div class="accordion-body p-4" style="background-color: white !important;">
                         <ul class="text-start" style="list-style-type: none;">
                             <li>Kamu termasuk murid dari sekolah yang bekerja sama dengan Virtuclass.id.</li>
                             <li>Kamu memiliki niat belajar yang tinggi.</li>

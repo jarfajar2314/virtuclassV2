@@ -22,8 +22,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-3 mb-4">
-                        <CardBlock :title="'Matematika'" :desc="'lorem ipsum dolor sit amet'" :id="1" />
+                    <div v-for="n in 6" :key="n" class="col-md-3 mb-4">
+                        <CardBlock :title="'Matematika'" :desc="'lorem ipsum dolor sit amet'" :id="n" />
                     </div>
                 </div>
             </div>

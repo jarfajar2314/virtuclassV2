@@ -20,7 +20,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12 mb-4">
-                        <ContentBody />
+                        <ContentBody :id="idModul" :isMaterial="isMaterial" />
                     </div>
                 </div>
             </div>
@@ -36,17 +36,26 @@ export default {
     name: 'ModulView',
     components: {
         SubmodulCard,
-        ContentBody
+        ContentBody,
     },
     props: {
         id: {
             type: Number,
             required: true
+        },
+        idsoal: {
+            type: Number
         }
     },
     data() {
         return {
-            idModul: `course/${this.id}`,
+            idModul: this.id,
+            isMaterial: this.idsoal == undefined ? true : false,
+        }
+    },
+    watch: {
+        idsoal: function (val) {
+            this.isMaterial = val == undefined ? true : false
         }
     },
 }

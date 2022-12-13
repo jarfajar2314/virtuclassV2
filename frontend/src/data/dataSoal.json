@@ -1,0 +1,252 @@
+[
+    {
+        "idSoal": 1,
+        "soal": "Apakah anda pernah mengalami sakit kepala?",
+        "jawaban": 4,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "cacaaacacaca"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "dadasdfasd"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "vasdfdfasdf"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 2,
+        "soal": "Apakah anda pernah mengalami sakit kaki?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 3,
+        "soal": "Apakah anda pernah mengalami sakit perut?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 4,
+        "soal": "Apakah anda pernah mengalami sakit lambung?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 5,
+        "soal": "Apakah anda pernah mengalami sakit rambut?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 6,
+        "soal": "Apakah anda pernah mengalami sakit dengkul?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 7,
+        "soal": "Apakah anda pernah mengalami sakit badan?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 8,
+        "soal": "Apakah anda pernah mengalami pegal-pegal?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 9,
+        "soal": "Apakah anda pernah mengalami diare?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 10,
+        "soal": "Apakah anda pernah mengalami demam?",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "blablabala"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "blablabala"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "blablabala"
+            }
+        ],
+        "idModul": 1
+    }
+]

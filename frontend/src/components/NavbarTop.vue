@@ -33,13 +33,14 @@
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                 <!-- Kasih kondisional login atau belum untuk tampilkan ini -->
                                 <RouterLink class="dropdown-item" to="/user/profile">
-                                    <p>Disini Isi Username</p>
+                                    <p>John Doe</p>
                                 </RouterLink>
-                                <RouterLink class="dropdown-item" to="/login">
+                                <RouterLink style="color:white; background-color: #991311; background-size: cover;"
+                                    class="dropdown-item" to="/login">
                                     <span>
-                                        <Icon class='iconify-inline' icon="carbon:login" />
+                                        <Icon style="color: white;" class='iconify-inline' icon="carbon:logout" />
                                     </span>
-                                    <span class="ml-4">Masuk</span>
+                                    <span class="ml-4">Keluar</span>
                                 </RouterLink>
                             </div>
                         </div>

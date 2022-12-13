@@ -33,7 +33,14 @@ const router = createRouter({
     {
       path: '/course/:id',
       name: 'modul',
-      component: () => import('../views/User/ModulView.vue')
+      component: () => import('../views/User/ModulView.vue'),
+      props: true
+    },
+    {
+      path: '/course/:id/soal/:idsoal',
+      name: 'soal',
+      component: () => import('../views/User/ModulView.vue'),
+      props: true
     },
     {
       path: '/faq',

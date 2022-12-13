@@ -36,14 +36,14 @@
                 <form method="post" action="" enctype="multipart/form-data">
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
-                        <input type="text" name="nama_siswa" class="form-control" id="nama"
+                        <input type="text" name="nama_siswa" class="form-control" v-model="regisData.nama" id="nama"
                             placeholder="Masukkan Nama Lengkap" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="asalsekolah" class="form-label">Asal sekolah</label>
                         <input type="text" name="asal_sekolah" class="form-control" id="asalsekolah"
-                            placeholder="Masukkan Asal sekolah" required>
+                            v-model="regisData.asalSekolah" placeholder="Masukkan Asal sekolah" required>
                     </div>
 
                     <label for="jk" class="mb-2">Jenis Kelamin</label>
@@ -102,14 +102,25 @@
 </template>
 
 <script>
-// import { RouterLink } from 'vue-router'
-// import { Icon } from '@iconify/vue';
 
 export default {
     name: 'RegisterView',
     components: {
-        // RouterLink,
-        // Icon
+    },
+    data() {
+        return {
+            regisData: {
+                nama: '',
+                asalSekolah: '',
+                jenisKelamin: '',
+                email: '',
+                password: '',
+                role: '',
+                nomorTelp: '',
+                kelas: '',
+                kartuPelajar: '',
+            },
+        }
     }
 }
 </script>
