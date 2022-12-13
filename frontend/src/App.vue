@@ -30,6 +30,22 @@ export default {
   color: #2c3e50;
 }
 
+.red-maroon {
+  background-color: #991311 !important;
+}
+
+.red-maroon-text {
+  color: #901311 !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.grey {
+  background-color: #D3D3D3 !important;
+}
+
 .header {
   background-color: #991311 !important;
 }
@@ -165,6 +181,69 @@ html {
   .space {
     margin-top: 10%;
     margin-bottom: 10%;
+  }
+
+  .shadow-block {
+    border: 10px solid;
+    border-image: linear-gradient(90deg, purple, orange)
+  }
+
+  /* STYLING */
+  .container-tab {  
+      max-width: 620px; 
+      min-width: 420px;
+      margin: 40px auto;
+      font-family: "Nunito Sans", Arial, Helvetica, sans-serif;
+      color: #888;
+  }
+
+  /* Style the tabs */
+  .tabs {
+      overflow: hidden;
+      margin-left: 20px;
+      margin-bottom: -2px;
+  }
+
+  .tabs ul {
+      list-style-type: none;
+      margin-left: 20px;
+  }
+
+  .tabs a{
+      float: left;
+      cursor: pointer;
+      padding: 12px 24px;
+      transition: background-color 0.2s;
+      border: 1px solid #ccc;
+      border-right: none;
+      background-color: #f1f1f1;
+      border-radius: 10px 10px 0 0;
+      font-weight: bold;
+  }
+  .tabs a:last-child { 
+      border-right: 1px solid #ccc;
+  }
+
+  /* Change background color of tabs on hover */
+  .tabs a:hover {
+      background-color: #aaa;
+      color: #fff;
+  }
+
+  /* Styling for active tab */
+  .tabs a.active {
+      background-color: #fff;
+      color: #484848;
+      border-bottom: 2px solid #fff;
+      cursor: default;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+      padding: 30px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 3px 3px 6px #e1e1e1
   }
 }
 </style>
