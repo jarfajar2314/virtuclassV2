@@ -49,6 +49,16 @@ const router = createRouter({
       path: '/guru/detail-nilai',
       name: 'detail-nilai',
       component: () => import('../views/Guru/detailNilai.vue')
+    },
+    {
+      path: '/guru/dashboard-kelas',
+      name: 'dashboard-kelas',
+      component: () => import('../views/Guru/dashboardKelas.vue')
+    },
+    {
+      path: '/guru/edit-kelas',
+      name: 'edit-kelas',
+      component: () => import('../views/Guru/editKelas.vue')
     }
   ]
 })

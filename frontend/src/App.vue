@@ -31,7 +31,19 @@ export default {
 }
 
 .red-maroon {
-  background-color: #991311;
+  background-color: #991311 !important;
+}
+
+.red-maroon-text {
+  color: #901311 !important;
+}
+
+.white {
+  color: white !important;
+}
+
+.grey {
+  background-color: #D3D3D3 !important;
 }
 
 .header {
