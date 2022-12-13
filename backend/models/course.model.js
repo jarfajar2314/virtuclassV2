@@ -14,14 +14,9 @@ module.exports = (sequelize, Sequelize) => {
 		kelas: {
 			type: Sequelize.STRING,
 		},
-		// id_guru: {
-		// 	type: Sequelize.INTEGER,
-
-		// 	references: {
-		// 		model: "teachers",
-		// 		key: "id",
-		// 	},
-		// },
+		backgroundImage: {
+			type: Sequelize.STRING,
+		},
 	});
 
 	return Course;

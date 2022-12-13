@@ -15,17 +15,17 @@ exports.signup = (req, res) => {
 	if (role == "siswa") {
 		Siswa.create({
 			nama: req.body.nama,
-			asal_sekolah: req.body.asalSekolah,
-			jenis_kelamin: req.body.jenisKelamin,
+			asalSekolah: req.body.asalSekolah,
+			jenisKelamin: req.body.jenisKelamin,
 			email: req.body.email,
 			password: bcrypt.hashSync(req.body.password, 8),
-			telepon: req.body.nomorTelp,
+			nomorTelp: req.body.nomorTelp,
 			kelas: req.body.kelas,
-			bukti_identitas_pelajar: req.body.kartuPelajar,
+			kartuPelajar: req.body.kartuPelajar,
 			validated: 0,
 		})
 			.then(() => {
-				res.send({
+				res.status(200).send({
 					message: "Student was registered successfully.",
 				});
 			})
@@ -39,7 +39,7 @@ exports.signup = (req, res) => {
 			password: bcrypt.hashSync(req.body.password, 8),
 		})
 			.then(() => {
-				res.send({
+				res.status(200).send({
 					message: "Teacher was registered successfully.",
 				});
 			})

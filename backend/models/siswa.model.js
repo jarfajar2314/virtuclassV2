@@ -14,22 +14,22 @@ module.exports = (sequelize, Sequelize) => {
 		nama: {
 			type: Sequelize.STRING,
 		},
-		jenis_kelamin: {
+		jenisKelamin: {
 			type: Sequelize.STRING,
 		},
-		asal_sekolah: {
+		asalSekolah: {
 			type: Sequelize.STRING,
 		},
 		kelas: {
 			type: Sequelize.STRING,
 		},
-		telepon: {
+		nomorTelp: {
 			type: Sequelize.STRING,
 		},
-		profil_picture: {
+		profilPicture: {
 			type: Sequelize.STRING,
 		},
-		bukti_identitas_pelajar: {
+		kartuPelajar: {
 			type: Sequelize.STRING,
 		},
 		validated: {
