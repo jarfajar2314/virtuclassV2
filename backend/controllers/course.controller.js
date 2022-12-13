@@ -2,7 +2,21 @@ const db = require("../models");
 const Course = db.course;
 
 exports.addCourse = (req, res) => {
-	Course.create({});
+	Course.create({
+		nama: req.body.nama,
+		description: req.body.description,
+		kelas: req.body.kelas,
+		backgroundImage: req.body.backgroundImage,
+		id_guru: req.body.id_guru,
+	})
+		.then(() => {
+			res.status(200).send({
+				message: "Course created successfully.",
+			});
+		})
+		.catch((err) => {
+			res.status(500).send({ message: err.message });
+		});
 };
 exports.update = (req, res) => {
 	Course.findOne({
