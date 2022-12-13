@@ -1,250 +1,375 @@
 [
     {
         "idSoal": 1,
-        "soal": "Apakah anda pernah mengalami sakit kepala?",
+        "soal": "Himpunan P = {2, 3, 4, 6} dan Q = {1,2,3,4,6,8} dan “faktor dari” merupakan relasi yang menghubungkan antara himpunan P ke himpunan Q . Buatlah relasi ke bentuk himpunan pasangan berurutan…",
         "jawaban": 4,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "{(2,2)}, {(2,4)}, {(2,6)}, {(2,8)}, {(3,3)}, {(3,6)}, {(4,4)}, {(4,8)}, {(6,6)}"
             },
             {
                 "idPilihan": 2,
-                "pilihan": "cacaaacacaca"
+                "pilihan": "{(2,18)}, {(2,2)}, {(2,3)}, {(2,8)}, {(3,6)}, {(3,6)}, {(4,7)}, {(4,3)}, {(6,2)}"
             },
             {
                 "idPilihan": 3,
-                "pilihan": "dadasdfasd"
+                "pilihan": "{(1,5)}, {(8,4)}, {(3,6)}, {(2,2)}, {(9,3)}, {(5,6)}, {(7,4)}, {(2,8)}, {(1,6)}"
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "vasdfdfasdf"
+                "pilihan": "{(2,1)}, {(1,4)}, {(6,6)}, {(9,8)}, {(6,3)}, {(9,6)}, {(3,4)}, {(2,8)}, {(7,6)}"
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 2,
-        "soal": "Apakah anda pernah mengalami sakit kaki?",
-        "jawaban": 1,
+        "soal": "Himpunan pasangan berurutan di bawah ini yang merupakan pemetaan adalah",
+        "jawaban": 3,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "{(p,1), (q,1), (r,1), (r,2)}"
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": "{(1,p), (1,q), (1,r), (2,r)}"
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": "{(p,1), (q,1), (r,3), (r,4)}"
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": "{(1,p), (1,q), (3,r), (4,r)}"
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 3,
-        "soal": "Apakah anda pernah mengalami sakit perut?",
+        "soal": "Jika siska menyukai sepakbola, liya menyukai voli dan basket dan berli menyukai basket dan sepakbola. buatlah relasi himpunan pasangan berurutan…",
         "jawaban": 1,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "{(Siska, sepakbola)}, {(liya,voli)}, {(liya,basket)}, {(berli,basket)}, {(berli,sepakbola)}"
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": "{(Siska, sepakbola)}, {(liya,voli)}, {(liya,basket)}, {(berli,basket)}, {(berli,sepakbola)}"
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": "{(Siska, sepakbola)}, {(liya,voli)}, {(liya,basket)}, {(berli,basket)}, {(berli,sepakbola)}"
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": "{(Siska, sepakbola)}, {(liya,voli)}, {(liya,basket)}, {(berli,basket)}, {(berli,sepakbola)}"
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 4,
-        "soal": "Apakah anda pernah mengalami sakit lambung?",
-        "jawaban": 1,
+        "soal": "Dalam seleksi penerima beasiswa prestasi, setiap mahasiswa harus lulus tes TPA (Tes Potensi Akademik) dan Bahasa Inggris. Dari 180 peserta terdapat 103 orang dinyatakan lulus tes TPA dan 142 orang lulus tes Bahasa. Banyak siswa yang dinyatakan lulus sebagai penerima beasiswa prestasi adalah ",
+        "jawaban": 2,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "38 orang"
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": "45 orang"
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": "65 orang"
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": "77 orang"
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 5,
-        "soal": "Apakah anda pernah mengalami sakit rambut?",
-        "jawaban": 1,
+        "soal": "P(A) adalah himpunan kuasa (power set). Jika a dan b adalah berbeda merupakan anggota himpunan, tentukan berapa banyak anggota (elemen ) dari power set P ( {Ø, a, {a}, {{a}} } )",
+        "jawaban": 5,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": 4
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": 8
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": 6
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": 16
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 6,
-        "soal": "Apakah anda pernah mengalami sakit dengkul?",
+        "soal": "Himpunan ganda ( Multi set) adalah himpunan yang angotanya boleh berulang. A dan B adalah himpunan ganda, A= { a, a, a, b, b, c } B= { a, a, b, b, b, d, d , d, d }. Pernyataan yang benar dari operasi dibawah adalah",
         "jawaban": 1,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "A ∩ B = {a, a, b, b, c, d }"
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": "A – B= {a, b, b, c}"
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": "A + B= {a, a, a, a,a, b, b, b, c, d} "
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": "A + B = {a, a, a,b, b, b, b, c, d}"
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 7,
-        "soal": "Apakah anda pernah mengalami sakit badan?",
+        "soal": "Manakah diantara relasi berikut yang bersifat: refleksif, setangkup, tidak menghantar:",
         "jawaban": 1,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "Himpunan A = {1, 2, 3, 4}, R = {(1,1), (1,3), (2, 2), (2, 3), (2, 4), (3, 3), (4, 1), (4, 3), (4, 4)}"
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": "Himpunan A = {1, 2, 3, 4}, R = {(1, 1), (1, 2), (1, 4), (2, 1), (2, 2), (2, 3), (3, 2), (3, 3), (4, 1), (4, 4)}"
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": "Himpunan A = {1, 2, 3}, R = {(1, 1), (1, 2), (1, 3), (2, 1), (2, 2), (2, 3), (3, 1), (3, 2), (3, 3)}"
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": "Semua jawaban tidak ada yang benar"
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 8,
-        "soal": "Apakah anda pernah mengalami pegal-pegal?",
+        "soal": "Diberikan fungsi bilangan riil sebagai berikut: f(x) = (x + 1)/(x + 2). Fungsi tersebut bersifat:",
         "jawaban": 1,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "Injektif, surjektif, bijektif "
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": "Tidak injektif, surjektif, tidak bijektif"
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": "Injektif, tidak surjektif, tidak bijektif"
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": "Tidak injektif, tidak surjektif, tidak bijektif"
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 9,
-        "soal": "Apakah anda pernah mengalami diare?",
+        "soal": "Fungsi f(x) = (3x) mod 5 adalah fungsi:",
         "jawaban": 1,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "Satu-ke-satu (one-to-one)"
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": "Pada (onto)"
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": "Satu-ke-satu, tetapi tidak pada"
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": "Bukan fungsi satu-ke-satu, tetapi fungsi pada"
             }
         ],
         "idModul": 1
     },
     {
         "idSoal": 10,
-        "soal": "Apakah anda pernah mengalami demam?",
+        "soal": "Terdapat perangko dengan nilai 5 sen dan 7 sen. Dari dua jenis perangko tersebut, maka tentukan pernyataan berikut ini benar atau salah.",
         "jawaban": 1,
         "pilihan": [
             {
                 "idPilihan": 1,
-                "pilihan": "blablabala"
+                "pilihan": "Biaya pos terkecil yang bisa digunakan sebagai basis untuk membuktikan bahwa hanya dengan dua perangko tersebut bisa untuk mengirimkan surat adalah 14 sen."
             },
             {
                 "idPilihan": 2,
-                "pilihan": "blablabala"
+                "pilihan": "Biaya pos terkecil yang bisa digunakan sebagai basis untuk membuktikan bahwa hanya dengan dua perangko tersebut bisa untuk mengirimkan surat adalah 24 sen."
             },
             {
                 "idPilihan": 3,
-                "pilihan": "blablabala"
+                "pilihan": "Biaya pos terkecil yang bisa digunakan sebagai basis untuk membuktikan bahwa hanya dengan dua perangko tersebut bisa untuk mengirimkan surat adalah 12 sen."
             }
             ,
             {
                 "idPilihan": 4,
-                "pilihan": "blablabala"
+                "pilihan": "Pada langkah induksi, kita asumsikan biaya pos untuk senilai n sen menggunakan dua buah perangko 7 sen, maka biaya n+1 sen dapat diperoleh dengan menggunakan 3 buah perangko senilai 5 sen"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 11,
+        "soal": "Diketahui fungsi boolean f(w,x,y,z) = xz + wz’ + xy’+ w’y’z + x’yz’. Fungsi tersebut adalah fungsi yang menerima masukan kode biner dari suatu digit desimal yang bernilai 1 jika dan hanya jika inputnya berupa:",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "Bilangan ganjil"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "Bilangan prima"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "Bilangan yang tidak habis dibagi 3"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "Bilangan kelipatan 5"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 12,
+        "soal": "Komplemen dari fungsi boolean f(x,y,z) = x(y’z’ + yz) adalah",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "∏(0, 1, 2, 3, 5, 6)"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "∑(0, 1, 2, 3, 5, 6)"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "∑(4, 7)"
+            }
+            ,
+            {
+                "idPilihan": 4,
+                "pilihan": "Tidak ada jawaban yang benar"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 13,
+        "soal": "P(A) adalah himpunan kuasa (power set). Jika a dan b adalah berbeda merupakan anggota himpunan, tentukan berapa banyak anggota (elemen ) dari power set P ( {Ø, a, {a}, {{a}} } ).",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "4"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "8"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "6"
+            }
+            ,
+            {
+                "idPilihan": 16,
+                "pilihan": "Tidak ada jawaban yang benar"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 14,
+        "soal": "Proposisi adalah….",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "Pernyataan deklaratif yang hanya dapat bernilai benar ATAU salah (tidak kedua-duannya)"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "Pernyataan subjektif yang hanya dapat bernilai benar ATAU salah (tidak kedua-duannya)"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "Pertanyaan deklaratif yang hanya dapat bernilai benar ATAU salah (tidak kedua-duannya)"
+            }
+            ,
+            {
+                "idPilihan": 16,
+                "pilihan": "Pertanyaan subjektif yang hanya dapat bernilai benar ATAU salah (tidak kedua-duannya)"
+            }
+        ],
+        "idModul": 1
+    },
+    {
+        "idSoal": 15,
+        "soal": "Dasar dari logika adalah",
+        "jawaban": 1,
+        "pilihan": [
+            {
+                "idPilihan": 1,
+                "pilihan": "Pertanyaan Salah"
+            },
+            {
+                "idPilihan": 2,
+                "pilihan": "Pertanyaan Benar dan Salah"
+            },
+            {
+                "idPilihan": 3,
+                "pilihan": "Pertanyaan Benar"
+            }
+            ,
+            {
+                "idPilihan": 16,
+                "pilihan": "Peryataan Benar atau Salah"
             }
         ],
         "idModul": 1

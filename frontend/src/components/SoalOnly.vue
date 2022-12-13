@@ -7,24 +7,24 @@
         {{ pertanyaan }}
     </p>
     <button class="text-start p-3 cards mt-3 btn btn-block w-100 border border-secondary flex"
-        :class="{ 'bg-success text-light': check == 1, 'bg-danger text-light': check != 0 && check != 1 }"
+        :class="{ 'bg-success text-light': checkSt == 1, 'bg-danger text-light': checkSt != 0 && checkSt != 1 }"
         style="text-transform: none;" :onClick="changeStatSatu">
-        <p>{{ pilihan[0].pilihan }}</p>
+        <b>A.</b> {{ pilihan[0].pilihan }}
     </button>
     <button class="text-start p-3 cards mt-3 btn btn-block w-100 border border-secondary flex"
-        :class="{ 'bg-success text-light': check == 2, 'bg-danger text-light': check != 0 && check != 2 }"
+        :class="{ 'bg-success text-light': checkSt == 2, 'bg-danger text-light': checkSt != 0 && checkSt != 2 }"
         style="text-transform: none;" :onClick="changeStatDua">
-        <p>{{ pilihan[1].pilihan }}</p>
+        <b>B.</b> {{ pilihan[1].pilihan }}
     </button>
     <button class="text-start p-3 cards mt-3 btn btn-block w-100 border border-secondary flex"
-        :class="{ 'bg-success text-light': check == 3, 'bg-danger text-light': check != 0 && check != 3 }"
+        :class="{ 'bg-success text-light': checkSt == 3, 'bg-danger text-light': checkSt != 0 && checkSt != 3 }"
         style="text-transform: none;" :onClick="changeStatTiga">
-        <p>{{ pilihan[2].pilihan }}</p>
+        <b>C.</b> {{ pilihan[2].pilihan }}
     </button>
-    <button class="text-start p-3 cards mt-3 btn btn-block w-100 border border-secondary flex"
-        :class="{ 'bg-success text-light': check == 4, 'bg-danger text-light': check != 0 && check != 4 }"
+    <button class="text-start p-3 cards mt-3 btn w-100 border border-secondary flex"
+        :class="{ 'bg-success text-light': checkSt == 4, 'bg-danger text-light': checkSt != 0 && checkSt != 4 }"
         style="text-transform: none;" :onClick="changeStatEmpat">
-        <p>{{ pilihan[3].pilihan }}</p>
+        <b>D.</b> {{ pilihan[3].pilihan }}
     </button>
     <!-- ------- -->
 </template>
@@ -37,6 +37,10 @@ export default {
     },
     props: {
         id: {
+            type: Number,
+            required: true
+        },
+        check: {
             type: Number,
             required: true
         },
@@ -65,7 +69,7 @@ export default {
             dua: false,
             tiga: false,
             empat: false,
-            check: 0
+            checkSt: this.check
         }
     },
     methods: {
@@ -84,19 +88,21 @@ export default {
         checkJawaban() {
             if (this.satu) {
                 if (this.jawaban == 1)
-                    this.check = 1
+                    this.checkSt = 1
             } else if (this.dua) {
                 if (this.jawaban == 2)
-                    this.check = 2
+                    this.checkSt = 2
             } else if (this.tiga) {
                 if (this.jawaban == 3)
-                    this.check = 3
+                    this.checkSt = 3
             } else if (this.empat) {
                 if (this.jawaban == 4)
-                    this.check = 4
-            } else {
-                this.check = this.jawaban
+                    this.checkSt = 4
             }
+            this.checkSt = this.jawaban
+        },
+        nullCheckst() {
+            this.checkSt = 0
         }
     },
     watch: {
@@ -134,7 +140,7 @@ export default {
                 this.tiga = false
                 this.checkJawaban()
             }
-        },
+        }
     },
 }
 </script>
