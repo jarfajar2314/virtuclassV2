@@ -50,6 +50,14 @@ init = () => {
 			nama: "Muhammad Sumbul",
 			email: "muhammadsumbul@mail.com",
 			password: bcrypt.hashSync("111111", 8),
+		}).then(() => {
+			Course.create({
+				nama: "Kimia Dasar",
+				description: "Lorem Ipsum Dolor Sit Amet.",
+				kelas: "IX",
+				backgroundImage: "kimia.jpg",
+				id_guru: 1,
+			});
 		});
 
 		Guru.create({
@@ -57,22 +65,14 @@ init = () => {
 			nama: "Khalid Kashmiri",
 			email: "khalidkashmiri@mail.com",
 			password: bcrypt.hashSync("111111", 8),
-		});
-
-		Course.create({
-			nama: "Kimia Dasar",
-			description: "Lorem Ipsum Dolor Sit Amet.",
-			kelas: "IX",
-			backgroundImage: "kimia.jpg",
-			id_guru: 1,
-		});
-
-		Course.create({
-			nama: "Matematika Dasar",
-			description: "Lorem Ipsum Dolor Sit Amet.",
-			kelas: "IX",
-			backgroundImage: "mtk.jpg",
-			id_guru: 2,
+		}).then(() => {
+			Course.create({
+				nama: "Matematika Dasar",
+				description: "Lorem Ipsum Dolor Sit Amet.",
+				kelas: "IX",
+				backgroundImage: "mtk.jpg",
+				id_guru: 2,
+			});
 		});
 	}
 };

@@ -14,14 +14,14 @@ module.exports = (sequelize, Sequelize) => {
 		kunci_jawaban: {
 			type: Sequelize.STRING,
 		},
-		// id_submodul: {
-		// 	type: Sequelize.INTEGER,
+		id_submodul: {
+			type: Sequelize.INTEGER,
 
-		// 	references: {
-		// 		model: "submoduls",
-		// 		key: "id",
-		// 	},
-		// },
+			references: {
+				model: "submoduls",
+				key: "id",
+			},
+		},
 	});
 
 	return Soal;

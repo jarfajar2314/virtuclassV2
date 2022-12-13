@@ -28,20 +28,20 @@ db.submodul = require("../models/subModul.model.js")(sequelize, Sequelize);
 db.soal = require("../models/soal.model.js")(sequelize, Sequelize);
 db.assignment = require("../models/assignment.model.js")(sequelize, Sequelize);
 
-db.guru.hasMany(db.course, {
-	foreignKey: "id_guru",
-});
+// db.guru.hasMany(db.course, {
+// 	foreignKey: "id_guru",
+// });
 
-db.modul.hasMany(db.submodul, {
-	foreignKey: "id_modul",
-});
+// db.modul.hasMany(db.submodul, {
+// 	foreignKey: "id_modul",
+// });
 
-db.submodul.hasMany(db.soal, {
-	foreignKey: "id_submodul",
-});
+// db.submodul.hasMany(db.soal, {
+// 	foreignKey: "id_submodul",
+// });
 
-db.siswa.hasMany(db.assignment, {
-	foreignKey: "id_siswa",
-});
+// db.siswa.hasMany(db.assignment, {
+// 	foreignKey: "id_siswa",
+// });
 
 module.exports = db;

@@ -1,5 +1,6 @@
 const db = require("../models");
 const Siswa = db.siswa;
+const bcrypt = require("bcryptjs");
 
 exports.lihat = (req, res) => {
 	Siswa.findOne({
@@ -42,9 +43,24 @@ exports.update = (req, res) => {
 					...req.body,
 				})
 				.then(() => {
-					res.status(200).send({
-						message: "Siswa updated sucessfully.",
-					});
+					if (req.body.password) {
+						siswa
+							.update({
+								password: bcrypt.hashSync(req.body.password, 8),
+							})
+							.then(() => {
+								res.status(200).send({
+									message: "Siswa updated sucessfully.",
+								});
+							})
+							.catch((err) => {
+								res.status(500).send({ message: err.message });
+							});
+					} else {
+						res.status(200).send({
+							message: "Siswa updated sucessfully.",
+						});
+					}
 				});
 		})
 		.catch((err) => {

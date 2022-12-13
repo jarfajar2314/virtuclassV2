@@ -14,14 +14,14 @@ module.exports = (sequelize, Sequelize) => {
 		size: {
 			type: Sequelize.STRING,
 		},
-		// id_siswa: {
-		// 	type: Sequelize.INTEGER,
+		id_siswa: {
+			type: Sequelize.INTEGER,
 
-		// 	references: {
-		// 		model: "students",
-		// 		key: "id",
-		// 	},
-		// },
+			references: {
+				model: "students",
+				key: "id",
+			},
+		},
 	});
 
 	return Assignment;
