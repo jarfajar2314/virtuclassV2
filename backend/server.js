@@ -41,6 +41,7 @@ require("./routes/course.routes")(app);
 require("./routes/modul.routes")(app);
 require("./routes/subModul.routes")(app);
 require("./routes/soal.routes")(app);
+require("./routes/nilai.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
