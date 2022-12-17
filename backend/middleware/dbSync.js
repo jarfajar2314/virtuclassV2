@@ -1,4 +1,4 @@
-const { guru } = require("../models");
+const { guru, nilai } = require("../models");
 const db = require("../models");
 
 init = () => {
@@ -11,6 +11,7 @@ init = () => {
 	const Siswa = db.siswa;
 	const Course = db.course;
 	const Guru = db.guru;
+	const Nilai = db.nilai;
 	const bcrypt = require("bcryptjs");
 	function initial() {
 		Admin.create({
@@ -30,6 +31,18 @@ init = () => {
 			kelas: "IX",
 			kartuPelajar: "kartupelajar.jpg",
 			validated: 0,
+		}).then(() => {
+			Nilai.create({
+				kategori: "UTS",
+				nilai: 90,
+				id_siswa: 1,
+			});
+
+			Nilai.create({
+				kategori: "UAS",
+				nilai: 95,
+				id_siswa: 1,
+			});
 		});
 
 		Siswa.create({

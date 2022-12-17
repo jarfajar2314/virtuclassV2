@@ -8,14 +8,14 @@ module.exports = (sequelize, Sequelize) => {
 		nama: {
 			type: Sequelize.STRING,
 		},
-		// id_course: {
-		// 	type: Sequelize.INTEGER,
+		id_course: {
+			type: Sequelize.INTEGER,
 
-		// 	references: {
-		// 		model: "courses",
-		// 		key: "id",
-		// 	},
-		// },
+			references: {
+				model: "courses",
+				key: "id",
+			},
+		},
 	});
 
 	return Modul;

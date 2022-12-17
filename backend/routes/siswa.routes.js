@@ -9,6 +9,8 @@ module.exports = function (app) {
 		next();
 	});
 
+	app.get("/api/siswa", controller.getAll);
 	app.get("/api/siswa/detail/:id", controller.lihat);
+	app.get("/api/siswa/detail/:id/nilai", controller.getNilai);
 	app.post("/api/siswa/update/:id", controller.update);
 };

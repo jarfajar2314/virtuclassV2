@@ -14,11 +14,11 @@ module.exports = (sequelize, Sequelize) => {
 		kunci_jawaban: {
 			type: Sequelize.STRING,
 		},
-		id_submodul: {
+		id_modul: {
 			type: Sequelize.INTEGER,
 
 			references: {
-				model: "submoduls",
+				model: "moduls",
 				key: "id",
 			},
 		},

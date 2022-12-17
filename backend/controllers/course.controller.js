@@ -18,6 +18,7 @@ exports.addCourse = (req, res) => {
 			res.status(500).send({ message: err.message });
 		});
 };
+
 exports.update = (req, res) => {
 	Course.findOne({
 		where: {
@@ -48,8 +49,17 @@ exports.update = (req, res) => {
 			res.status(500).send({ message: err.message });
 		});
 };
+
 exports.getAll = (req, res) => {
-	Course.findAll()
+	var getCourses = Course.findAll();
+	if (req.query.kelas) {
+		getCourses = Course.findAll({
+			where: {
+				kelas: req.query.kelas,
+			},
+		});
+	}
+	getCourses
 		.then((courses) => {
 			if (!courses) {
 				return res.status(404).send({
@@ -67,11 +77,39 @@ exports.getAll = (req, res) => {
 			res.status(500).send({ message: err.message });
 		});
 };
+
+exports.getByKelas = (req, res) => {
+	Course.findAll({
+		where: {
+			kelas: req.body.kelas,
+		},
+	})
+		.then((courses) => {
+			if (!courses) {
+				return res.status(404).send({
+					message: "Course not found.",
+				});
+			}
+
+			res.status(200).send({
+				message: "Courses fetched successfully.",
+				count: courses.length,
+				data: courses,
+			});
+		})
+		.catch((err) => {
+			res.status(500).send({ message: err.message });
+		});
+};
+
 exports.getCourse = (req, res) => {
 	Course.findOne({
 		where: {
 			id: req.params.id,
 		},
+		// include: [{
+		// 	model:
+		// }]
 	})
 		.then((course) => {
 			if (!course) {

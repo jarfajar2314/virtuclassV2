@@ -9,8 +9,8 @@ module.exports = function (app) {
 		next();
 	});
 
-	app.get("/api/course", controller.getAll);
+	app.get("/api/courses", controller.getAll);
 	app.get("/api/course/detail/:id", controller.getCourse);
 	app.post("/api/course/update/:id", controller.update);
-	app.post("/api/course/add", controller.addCourse);
+	app.post("/api/course/create", controller.addCourse);
 };
