@@ -10,4 +10,5 @@ module.exports = function (app) {
 	});
 
 	app.post("/api/soal/create", controller.create);
+	app.get("/api/soal/", controller.getSoal);
 };

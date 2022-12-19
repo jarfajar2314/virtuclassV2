@@ -5,16 +5,16 @@ module.exports = (sequelize, Sequelize) => {
 			autoIncrement: true,
 			primaryKey: true,
 		},
-		isi_soal: {
-			type: Sequelize.STRING,
+		soal: {
+			type: Sequelize.TEXT,
 		},
-		pilihan_jawaban: {
-			type: Sequelize.STRING,
+		jawaban: {
+			type: Sequelize.INTEGER,
 		},
-		kunci_jawaban: {
-			type: Sequelize.STRING,
+		pilihan: {
+			type: Sequelize.TEXT,
 		},
-		id_modul: {
+		idModul: {
 			type: Sequelize.INTEGER,
 
 			references: {

@@ -46,7 +46,7 @@ db.siswa.hasMany(db.nilai, {
 });
 
 db.modul.hasMany(db.soal, {
-	foreignKey: "id_modul",
+	foreignKey: "idModul",
 });
 
 module.exports = db;

@@ -53,7 +53,7 @@ exports.getAll = (req, res) => {
 	}
 	getModuls
 		.then((moduls) => {
-			if (!moduls) {
+			if (!moduls.length) {
 				return res.status(404).send({
 					message: "Modul not found.",
 				});
