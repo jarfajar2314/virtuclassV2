@@ -5,17 +5,23 @@ module.exports = (sequelize, Sequelize) => {
 			autoIncrement: true,
 			primaryKey: true,
 		},
-		nama: {
+		judul: {
 			type: Sequelize.STRING,
 		},
-		id_course: {
-			type: Sequelize.INTEGER,
-
-			references: {
-				model: "courses",
-				key: "id",
-			},
+		deskripsi: {
+			type: Sequelize.STRING,
 		},
+		kelas: {
+			type: Sequelize.STRING,
+		},
+		// id_course: {
+		// 	type: Sequelize.INTEGER,
+
+		// 	references: {
+		// 		model: "courses",
+		// 		key: "id",
+		// 	},
+		// },
 	});
 
 	return Modul;

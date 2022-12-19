@@ -5,11 +5,11 @@ module.exports = (sequelize, Sequelize) => {
 			autoIncrement: true,
 			primaryKey: true,
 		},
-		judul: {
+		nama: {
 			type: Sequelize.STRING,
 		},
-		content: {
-			type: Sequelize.STRING,
+		materi: {
+			type: Sequelize.TEXT,
 		},
 		id_modul: {
 			type: Sequelize.INTEGER,

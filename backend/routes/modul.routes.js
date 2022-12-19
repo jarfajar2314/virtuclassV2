@@ -9,5 +9,8 @@ module.exports = function (app) {
 		next();
 	});
 
+	app.get("/api/moduls", controller.getAll);
 	app.post("/api/modul/create", controller.create);
+	app.post("/api/modul/update/:id", controller.update);
+	app.get("/api/modul/detail/:id", controller.getModul);
 };

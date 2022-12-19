@@ -3,9 +3,9 @@ const SubModul = db.submodul;
 
 exports.create = (req, res) => {
 	SubModul.create({
-		judul: req.body.judul,
-		content: req.body.content,
-		id_modul: 1,
+		nama: req.body.nama,
+		materi: JSON.stringify(req.body.materi),
+		id_modul: req.body.id_modul,
 	})
 		.then(() => {
 			res.status(200).send({
