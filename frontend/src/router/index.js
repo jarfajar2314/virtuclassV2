@@ -37,6 +37,12 @@ const router = createRouter({
       props: true
     },
     {
+      path: '/course/sub/:idSub',
+      name: 'submodul',
+      component: () => import('../views/User/ModulView.vue'),
+      props: true
+    },
+    {
       path: '/course/:id/soal/:idsoal',
       name: 'soal',
       component: () => import('../views/User/ModulView.vue'),

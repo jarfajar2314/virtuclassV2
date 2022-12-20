@@ -7,20 +7,25 @@
                     </div>
                 </div>
                 <!-- Submodul -->
-                <SubmodulCard :id="1" :title="'Aljabar'" />
-                <SubmodulCard :id="2" :title="'Geometri'" />
-                <SubmodulCard :id="3" :title="'Matematika Diskrit'" />
+                <div>
+                    <div v-if="!isMaterial" class="col-md-12 mb-4">
+                        <SubmodulCard :id="``" :title="dataModul.judul" :materi="``" />
+                    </div>
+                    <div v-else v-for="n in dataModul.submodul" :key="n" class="col-md-12 mb-4">
+                        <SubmodulCard :id="n.id" :title="n.nama" :materi="n.materi" :idSub="idSub" :sub="sub" />
+                    </div>
+                </div>
                 <!-- ------- -->
             </div>
             <div class="col-md-8">
                 <div class="row">
                     <div class="mb-3">
-                        <h4 class="">Matematika Diskrit</h4>
+                        <h4 class="">{{ dataModul.judul }}</h4>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12 mb-4">
-                        <ContentBody :id="idModul" :isMaterial="isMaterial" />
+                        <ContentBody :id="idModul" :isMaterial="isMaterial" :idSub="idSub" />
                     </div>
                 </div>
             </div>
@@ -31,6 +36,7 @@
 <script>
 import SubmodulCard from '../../components/SubmodulCard.vue'
 import ContentBody from '../../components/ContentBody.vue'
+import dataModul from '../../data/dataModul.json'
 
 export default {
     name: 'ModulView',
@@ -40,17 +46,28 @@ export default {
     },
     props: {
         id: {
-            type: Number,
+            type: String,
             required: true
         },
         idsoal: {
-            type: Number
+            type: String,
+            required: true
+        },
+        idSub: {
+            default: "1",
+            type: String,
+            required: true
         }
+    },
+    mounted() {
+        this.dataModul = dataModul[parseInt(this.id) - 1]
+        this.sub = dataModul[parseInt(this.id) - 1].submodul
     },
     data() {
         return {
             idModul: this.id,
             isMaterial: this.idsoal == undefined ? true : false,
+            dataModul,
         }
     },
     watch: {
