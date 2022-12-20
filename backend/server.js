@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const cors = require("cors");
+const dbSync = require("./middleware/dbSync");
 
 const app = express();
 
@@ -19,43 +20,28 @@ app.use(express.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
-const db = require("../backend/models");
+const db = require("./models");
 
 if (process.env.NODE_ENV !== "production") {
-	const Role = db.role;
-
-	db.sequelize.sync({ force: true }).then(() => {
-		console.log("Drop and Resync Db");
-		initial();
-	});
-
-	function initial() {
-		Role.create({
-			id: 1,
-			name: "user",
-		});
-
-		Role.create({
-			id: 2,
-			name: "moderator",
-		});
-
-		Role.create({
-			id: 3,
-			name: "admin",
-		});
-	}
+	dbSync();
 } else {
 	db.sequelize.sync();
 }
 
 // route
 app.get("/", (req, res) => {
-	res.json({ message: "Welcome to bezkoder application." });
+	res.json({ message: "Virtuclass v2 API." });
 });
 
-require("../backend/routes/auth.routes")(app);
-require("../backend/routes/user.routes")(app);
+require("./routes/auth.routes")(app);
+require("./routes/user.routes")(app);
+require("./routes/admin.routes")(app);
+require("./routes/siswa.routes")(app);
+require("./routes/course.routes")(app);
+require("./routes/modul.routes")(app);
+require("./routes/subModul.routes")(app);
+require("./routes/soal.routes")(app);
+require("./routes/nilai.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
