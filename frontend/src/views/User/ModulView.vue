@@ -3,7 +3,8 @@
         <div class="row mt-5 pt-5">
             <div class="col-md-3 offset-md-1">
                 <div class="row">
-                    <div class="pb-5">
+                    <div class="py-5">
+                        <RouterLink class="btn btn-danger" to=""></RouterLink>
                     </div>
                 </div>
                 <!-- Submodul -->
@@ -20,7 +21,9 @@
             <div class="col-md-8">
                 <div class="row">
                     <div class="mb-3">
-                        <h4 class="">{{ dataModul.judul }}</h4>
+                        <div class="card px-2 py-3">
+                            <h4 class="">{{ dataModul.judul }}</h4>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -34,6 +37,7 @@
 </template>
 
 <script>
+import { RouterLink } from 'vue-router'
 import SubmodulCard from '../../components/SubmodulCard.vue'
 import ContentBody from '../../components/ContentBody.vue'
 import dataModul from '../../data/dataModul.json'
@@ -41,6 +45,7 @@ import dataModul from '../../data/dataModul.json'
 export default {
     name: 'ModulView',
     components: {
+        RouterLink,
         SubmodulCard,
         ContentBody,
     },

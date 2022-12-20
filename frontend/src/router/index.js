@@ -49,11 +49,6 @@ const router = createRouter({
       props: true
     },
     {
-      path: '/faq',
-      name: 'faq',
-      component: () => import('../views/User/FaqView.vue')
-    },
-    {
       path: '/guru/profile-guru',
       name: 'profil-guru',
       component: () => import('../views/Guru/profileGuru.vue')

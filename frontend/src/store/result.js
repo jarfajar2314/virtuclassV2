@@ -1,24 +1,26 @@
-import Vue from "vue";
+// import Vue from "vue";
 const state = {
-    searchParam: '',
-    searchResults: [],
-    bookmarks: JSON.parse(window.localStorage.getItem('bookmarks'))
+    bookmarks: JSON.parse(window.localStorage.getItem('bookmarks')),
+    accessToken: '',
+    role: '',
+    userData: {}
 }
 
 const getters = {
-    getSearchResults: state => state.searchResults,
-    getSearchParam: state => state.searchParam,
     getBookmarks: state => {
         return state.bookmarks
-    }
+    },
+    getAccessToken: state => state.accessToken,
+    getRole: state => state.role,
+    getUserData: state => state.userData,
 }
 
 const actions = {
-    async fetchSearchResult ({ commit }, searchItem) {
-        const res = await Vue.axios.get(`https://api.edamam.com/search?q=${searchItem}&app_id=${APP_ID}&app_key=${APP_KEY}&from=0&to=20`)
-        const results = res.data.hits
-        commit('updateSearchResults', results)
-    },
+    // async fetchSearchResult ({ commit }, searchItem) {
+    //     const res = await Vue.axios.get(`https://api.edamam.com/search?q=${searchItem}`)
+    //     const results = res.data.hits
+    //     commit('updateSearchResults', results)
+    // },
     async fetchSearchItem ({ commit }, item) {
         commit('updateSearchItem', item)
     }
