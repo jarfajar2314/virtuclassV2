@@ -6,7 +6,7 @@
                 <a class="btn w-25 mx-3 red-maroon white" href="" role="button" 
                 >Upload</a>
             </div>
-            <div class="mb-5 mt-5 pt-3 pb-5">
+            <!-- <div class="mb-5 mt-5 pt-3 pb-5">
                 <table class="table">
                     <thead>
                         <tr>
@@ -102,19 +102,46 @@
                         </tr>
                     </tbody>
                 </table>
+            </div> -->
+            <div class="mb-5 mt-5 pt-3 pb-5">
+                <DataTable :data="localData" class="display">
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                        </tr>
+                    </thead>
+                </DataTable>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-  import { MDBIcon } from 'mdb-vue-ui-kit';
-  import { MDBBtn } from "mdb-vue-ui-kit";
+//   import { MDBIcon } from 'mdb-vue-ui-kit';
+//   import { MDBBtn } from "mdb-vue-ui-kit";
+//   import { ClientTable } from 'vue-tables-2';
+//   import dataModul from '../../data/dataModul.json'
+import DataTable from 'datatables.net-vue3';
+import DataTablesLib from 'datatables.net';
+
+DataTable.use(DataTablesLib);
 
   export default {
     components: {
-      MDBIcon,
-      MDBBtn,
+    //   MDBIcon,
+    //   MDBBtn,
+    //   ClientTable,
     },
-  };
+    data() {
+        return {
+            localData: [
+                { kelas: 'John', judul: 'john@example.com'},
+                { kelas: 'Jane', judul: 'jane@example.com'}
+            ],
+            columns: ['kelas', 'judul'],
+            dataJson: [[1,2],[3,4]]
+        }
+    }
+}
 </script>
