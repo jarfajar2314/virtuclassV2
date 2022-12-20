@@ -81,9 +81,13 @@ exports.signin = (req, res) => {
 					});
 				}
 
-				var token = jwt.sign({ id: siswa.id }, config.secret, {
-					expiresIn: 86400, // 24 hours
-				});
+				var token = jwt.sign(
+					{ id: siswa.id, role: "siswa" },
+					config.secret,
+					{
+						expiresIn: 86400, // 24 hours
+					}
+				);
 
 				res.status(200).send({
 					id: siswa.id,
@@ -122,9 +126,13 @@ exports.signin = (req, res) => {
 					});
 				}
 
-				var token = jwt.sign({ id: guru.id }, config.secret, {
-					expiresIn: 86400, // 24 hours
-				});
+				var token = jwt.sign(
+					{ id: guru.id, role: "guru" },
+					config.secret,
+					{
+						expiresIn: 86400, // 24 hours
+					}
+				);
 
 				res.status(200).send({
 					id: guru.id,
@@ -162,9 +170,13 @@ exports.signin = (req, res) => {
 					});
 				}
 
-				var token = jwt.sign({ id: admin.id }, config.secret, {
-					expiresIn: 86400, // 24 hours
-				});
+				var token = jwt.sign(
+					{ id: admin.id, role: "admin" },
+					config.secret,
+					{
+						expiresIn: 86400, // 24 hours
+					}
+				);
 
 				res.status(200).send({
 					id: admin.id,
