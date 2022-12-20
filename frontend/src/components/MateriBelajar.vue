@@ -1,7 +1,13 @@
 <template>
     <!-- Materi -->
     <h5>
-        Logika Sederhana
+        <div class="" v-if="idSub != undefined">
+            <div class="" v-for="i in dataModul.submodul" :key="i">
+                <div class="" v-if="i.id == parseInt(idSub)">
+                    {{ i.name }}
+                </div>
+            </div>
+        </div>
     </h5>
     <p class="mt-2" style="text-align: justify">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
@@ -89,6 +95,7 @@
 </template>
 
 <script>
+import dataModul from '../data/dataModul.json'
 
 export default {
     name: 'MateriBelajar',
@@ -102,14 +109,21 @@ export default {
         link: {
             type: String,
             required: true
+        },
+        idSub: {
+            default: "1",
+            type: String,
+            required: true
         }
+    },
+    mounted() {
+        this.dataModul = dataModul[parseInt(this.id) - 1]
     },
     data() {
         return {
-            idSubModul: this.id,
-            idSoal: this.idSoall,
-            linkSoal: this.link
+            linkSoal: this.link,
+            dataModul
         }
-    },
+    }
 }
 </script>

@@ -19,20 +19,34 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.user = require("../models/user.model.js")(sequelize, Sequelize);
-db.role = require("../models/role.model.js")(sequelize, Sequelize);
+db.siswa = require("../models/siswa.model.js")(sequelize, Sequelize);
+db.guru = require("../models/guru.model.js")(sequelize, Sequelize);
+db.admin = require("../models/admin.model.js")(sequelize, Sequelize);
+db.course = require("../models/course.model.js")(sequelize, Sequelize);
+db.modul = require("../models/modul.model.js")(sequelize, Sequelize);
+db.submodul = require("../models/subModul.model.js")(sequelize, Sequelize);
+db.soal = require("../models/soal.model.js")(sequelize, Sequelize);
+db.assignment = require("../models/assignment.model.js")(sequelize, Sequelize);
+db.nilai = require("../models/nilai.model.js")(sequelize, Sequelize);
 
-db.role.belongsToMany(db.user, {
-	through: "user_roles",
-	foreignKey: "roleId",
-	otherKey: "userId",
-});
-db.user.belongsToMany(db.role, {
-	through: "user_roles",
-	foreignKey: "userId",
-	otherKey: "roleId",
+db.guru.hasMany(db.course, {
+	foreignKey: "id_guru",
 });
 
-db.ROLES = ["user", "admin", "moderator"];
+db.modul.hasMany(db.submodul, {
+	foreignKey: "id_modul",
+});
+
+db.siswa.hasMany(db.assignment, {
+	foreignKey: "id_siswa",
+});
+
+db.siswa.hasMany(db.nilai, {
+	foreignKey: "id_siswa",
+});
+
+db.modul.hasMany(db.soal, {
+	foreignKey: "idModul",
+});
 
 module.exports = db;

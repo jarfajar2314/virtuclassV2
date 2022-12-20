@@ -2,20 +2,28 @@
     <!-- Submodul -->
     <div class="accordion p-2" id="accordionExample">
         <div class="accordion-item">
-            <h2 class="accordion-header" :id=idEl>
-                <button class="accordion-button" style="background-color: white !important;" type="button"
-                    data-bs-toggle="collapse" :data-bs-target=idColl aria-expanded="true" :aria-controls=idColl>
-                    <b style="color: black">
-                        {{ titled }}
-                    </b>
+            <!-- For Implementation -->
+            <h2 class="accordion-header" :id="`flush-heading${id}`">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    :data-bs-target="`#flush-collapse${id}`" aria-expanded="true"
+                    :aria-controls="`flush-collapse${id}`">
+                    <b>{{ title }}</b>
                 </button>
             </h2>
-            <div :id=idColl class="accordion-collapse collapse text-start" :aria-labelledby=idEl
-                data-bs-parent="#accordionExample">
-                <div class="accordion-body" style="background-color: white !important; color: black;">
-                    <RouterLink style="text-decoration: none;" to="'/'">
-                        Materi
-                    </RouterLink>
+            <div v-for="i in materi" :key="i" :id="`flush-collapse${id}`" class="accordion-collapse collapse"
+                :aria-labelledby="`flush-heading${id}`" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <div class="row">
+                        <!-- v-for -->
+                        <div class="col-md-12 text-start">
+                            <div class="btn p-1 me-3" style="background-color:#991311">
+                            </div>
+                            <RouterLink :to="`/course/sub/${i.id}`" class="text-start text-dark"
+                                style="text-transform: none; text-decoration: none">
+                                {{ i.nama }}
+                            </RouterLink>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -24,12 +32,10 @@
 </template>
 
 <script>
-import { RouterLink } from 'vue-router';
 
 export default {
     name: 'SubmodulCard',
     components: {
-        RouterLink
     },
     props: {
         id: {
@@ -40,16 +46,18 @@ export default {
             type: String,
             required: true
         },
-        link: {
-            type: String,
+        materi: {
+            type: Array,
+            required: true
+        },
+        sub: {
+            type: Array,
             required: true
         }
     },
     data() {
         return {
-            idSubModul: this.id,
-            idEl: `heading${this.id}`,
-            idColl: `collapse${this.id}`,
+            subModul: this.sub,
             titled: this.title,
         }
     },

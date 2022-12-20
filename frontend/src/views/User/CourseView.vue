@@ -6,24 +6,27 @@
                     <div class="pb-5">
                     </div>
                 </div>
-                <RouterLink to='/' class="cards btn btn-block text-dark" style="text-transform: none;"><b>Kelas X</b>
-                </RouterLink>
-                <RouterLink to='/' class="cards btn btn-block text-dark mt-3" style="text-transform: none;"><b>Kelas
+                <button class="cards btn btn-block text-dark" @click="loadModul('x')"
+                    style="text-transform: none;"><b>Kelas X</b>
+                </button>
+                <button class="cards btn btn-block text-dark mt-3" @click="loadModul('xi')"
+                    style="text-transform: none;"><b>Kelas
                         XI</b>
-                </RouterLink>
-                <RouterLink to='/' class="cards btn btn-block text-dark mt-3" style="text-transform: none;"><b>Kelas
+                </button>
+                <button class="cards btn btn-block text-dark mt-3" @click="loadModul('xii')"
+                    style="text-transform: none;"><b>Kelas
                         XII</b>
-                </RouterLink>
+                </button>
             </div>
             <div class="col-md-8">
                 <div class="row">
                     <div class="mb-3">
-                        <input type="text" class="form-control" id="search" placeholder="Cari Modul">
+                        <input type="text" v-model="search" class="form-control" id="search" placeholder="Cari Modul">
                     </div>
                 </div>
                 <div class="row">
-                    <div v-for="n in 6" :key="n" class="col-md-3 mb-4">
-                        <CardBlock :title="'Matematika'" :desc="'lorem ipsum dolor sit amet'" :id="n" />
+                    <div v-for="n in filteredData" :key="n.idModul" class="col-md-4 mb-4">
+                        <CardBlock :title="n.judul" :desc="n.deskripsi" :id="n.idModul" />
                     </div>
                 </div>
             </div>
@@ -33,13 +36,36 @@
 
 <script>
 import CardBlock from '../../components/CardBlock.vue'
-import { RouterLink } from 'vue-router';
+import dataModul from '../../data/dataModul.json'
 
 export default {
     name: 'CourseView',
     components: {
-        CardBlock,
-        RouterLink
-    }
+        CardBlock
+    },
+    data() {
+        return {
+            search: '',
+            dataModul,
+            dataKelasModul: []
+        }
+    },
+    mounted() {
+        this.dataModul = dataModul
+    },
+    computed: {
+        filteredData() {
+            return this.dataKelasModul
+                .filter(
+                    ({ judul }) => [judul]
+                        .some(val => val.toLowerCase().includes(this.search.toLowerCase()))
+                );
+        }
+    },
+    methods: {
+        loadModul(kelas) {
+            this.dataKelasModul = this.dataModul.filter(modul => modul.kelas == kelas)
+        }
+    },
 }
 </script>
