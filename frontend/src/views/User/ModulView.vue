@@ -3,8 +3,10 @@
         <div class="row mt-5 pt-5">
             <div class="col-md-3 offset-md-1">
                 <div class="row">
-                    <div class="py-5">
-                        <RouterLink class="btn btn-danger" to=""></RouterLink>
+                    <div class="btn btn-danger py-5">
+                        <a class="" style="text-transform: none;" @click="$router.go(-1)">
+                            Kembali
+                        </a>
                     </div>
                 </div>
                 <!-- Submodul -->
@@ -37,7 +39,7 @@
 </template>
 
 <script>
-import { RouterLink } from 'vue-router'
+// import { RouterLink } from 'vue-router'
 import SubmodulCard from '../../components/SubmodulCard.vue'
 import ContentBody from '../../components/ContentBody.vue'
 import dataModul from '../../data/dataModul.json'
@@ -45,7 +47,7 @@ import dataModul from '../../data/dataModul.json'
 export default {
     name: 'ModulView',
     components: {
-        RouterLink,
+        // RouterLink,
         SubmodulCard,
         ContentBody,
     },
