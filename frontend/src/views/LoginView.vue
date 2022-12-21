@@ -195,6 +195,11 @@ export default {
 						"sessionData=" + JSON.stringify(dataCookie) + ";";
 					// console.log(this.store);
 					this.$router.push("/");
+					// console.log(this.$route);
+					// this.$router.go({
+					// 	path: "/",
+					// 	force: true,
+					// });
 					console.log(user);
 					// console.log(user);
 					// console.log(status);

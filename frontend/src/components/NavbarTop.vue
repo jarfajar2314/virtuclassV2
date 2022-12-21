@@ -72,24 +72,24 @@
 								>
 									<p>John Doe</p>
 								</RouterLink>
-								<RouterLink
-									style="
-										color: white;
-										background-color: #991311;
-										background-size: cover;
-									"
-									class="dropdown-item"
-									to="/login"
-								>
-									<span>
-										<Icon
-											style="color: white"
-											class="iconify-inline"
-											icon="carbon:logout"
-										/>
-									</span>
-									<span class="ml-4">Keluar</span>
-								</RouterLink>
+								<span>
+									<Icon
+										style="color: white"
+										class="iconify-inline"
+										icon="carbon:logout"
+									/>
+								</span>
+								<span class="ml-4">
+									<button
+										@click="logout"
+										class="btn btn-block text-light"
+										style="
+											background-color: #901311;
+											text-transform: none;
+										"
+										>Keluar</button
+									>
+								</span>
 							</div>
 						</div>
 					</li>
@@ -126,7 +126,17 @@ export default {
 		return {
 			logoVirtu: require("../assets/logo.png"), // eslint-disable-line no-undef
 			sessionData: sessionData,
+			renderComponent: true,
 		};
+	},
+	methods: {
+		logout() {
+			document.cookie =
+				"sessionData=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+
+			console.log("log out.");
+			this.$router.go();
+		},
 	},
 	computed: {
 		...mapGetters(["isLoggedIn"]),
