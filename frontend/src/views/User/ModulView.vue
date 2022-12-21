@@ -2,10 +2,11 @@
     <div class="container-fluid">
         <div class="row mt-5 pt-5">
             <div class="col-md-3 offset-md-1">
-                <div class="row">
-                    <div class="btn btn-danger py-5">
-                        <a class="" style="text-transform: none;" @click="$router.go(-1)">
-                            Kembali
+                <div class="row mb-5">
+                    <div class="btn btn-danger px-2 py-3">
+                        <a class="text-light" style="text-transform: none; text-decoration: none;"
+                            @click="$router.go(-1)">
+                            <h4>Kembali</h4>
                         </a>
                     </div>
                 </div>

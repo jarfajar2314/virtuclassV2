@@ -6,9 +6,10 @@
             </div>
         </div>
         <form method="post" class="text-start">
-        <div class="mb-3 mt-3 pt-5">
-            <input name="cari pelajar" class="form-control" id="cari pelajar" placeholder="Cari Pelajar" style="height: 60px">
-        </div>
+            <div class="mb-3 mt-3 pt-5">
+                <input name="cari pelajar" class="form-control" id="cari pelajar" v-model="search"
+                    placeholder="Cari Pelajar" style="height: 60px">
+            </div>
         </form>
         <div class="mb-5 mt-3 pt-3 pb-5 px-5">
             <table class="table">
@@ -22,38 +23,11 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">John Doe</th>
-                        <td>SMA Negeri XX Bandung</td>
-                        <td>john_doe@mail.com</td>
-                        <td>000011112222</td>
-                        <td>
-                            <button name="detail" class="btn btn-outline-success text-success btn-sm">Detail</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">John Doe</th>
-                        <td>SMA Negeri XX Bandung</td>
-                        <td>john_doe@mail.com</td>
-                        <td>000011112222</td>
-                        <td>
-                            <button name="detail" class="btn btn-outline-success text-success btn-sm">Detail</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">John Doe</th>
-                        <td>SMA Negeri XX Bandung</td>
-                        <td>john_doe@mail.com</td>
-                        <td>000011112222</td>
-                        <td>
-                            <button name="detail" class="btn btn-outline-success text-success btn-sm">Detail</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row">John Doe</th>
-                        <td>SMA Negeri XX Bandung</td>
-                        <td>john_doe@mail.com</td>
-                        <td>000011112222</td>
+                    <tr v-for="i in filteredData" :key="i.id">
+                        <th scope="row">{{ i.nama }}</th>
+                        <td>{{ i.asalSekolah }}</td>
+                        <td>{{ i.email }}</td>
+                        <td>{{ i.nomorTelp }}</td>
                         <td>
                             <button name="detail" class="btn btn-outline-success text-success btn-sm">Detail</button>
                         </td>
@@ -65,6 +39,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     name: 'profileGuru',
     components: {
@@ -73,7 +49,24 @@ export default {
         return {
             profileLogo: require('@/assets/Profile.png'),
             editLogo: require('@/assets/Edit.png'),
+            search: '',
+            siswa: []
         }
     },
+    computed: {
+        filteredData() {
+            return this.siswa
+                .filter(
+                    ({ nama }) => [nama]
+                        .some(val => val.toLowerCase().includes(this.search.toLowerCase()))
+                );
+        }
+    },
+    async created() {
+        const response1 = await axios.get('http://localhost:8081/api/siswa');
+        // const response2 = await axios.get(`http://localhost:8081/api/siswa/detail/${idSiswa}/nilai`);
+        this.siswa = response1.data.data;
+        // this.siswaDetail = response2.data.data;
+    }
 }
 </script>   

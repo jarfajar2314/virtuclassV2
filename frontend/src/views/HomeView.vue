@@ -7,7 +7,7 @@
                         <div class="row">
                             <p class="title-1"><b>Virtu</b>Class</p>
                             <p class="title-2">Belajar, Bercanda, Mengerti</p>
-                            <RouterLink class="tombol" to="/course">Coba Sekarang</RouterLink>
+                            <RouterLink class="tombol" to="/login">Coba Sekarang</RouterLink>
                         </div>
                     </div>
                 </div>

@@ -3,8 +3,7 @@
         <div class="p-5 text-center">
             <h1 class="mb-5 red-maroon-text">Manajemen Materi VirtuClass</h1>
             <div class="d-flex flex-row justify-content-start">
-                <a class="btn w-25 mx-3 red-maroon white" href="" role="button" 
-                >Upload</a>
+                <a class="btn w-25 mx-3 red-maroon white" href="" role="button">Upload</a>
             </div>
             <div class="mb-5 mt-5 pt-3 pb-5">
                 <table class="table">
@@ -14,83 +13,15 @@
                             <th scope="col">Course</th>
                             <th scope="col">Kelas</th>
                             <th scope="col">Modul</th>
-                            <th scope="col">Sub-Modul</th>
-                            <th scope="col">Content</th>
                             <th scope="col">Opsi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Fisika</td>
-                            <td>XI</td>
+                        <tr v-for="i in course" :key="i.id">
+                            <th scope="row">{{ i.id }}</th>
+                            <td>{{ i.nama }}</td>
+                            <td>{{ i.kelas }}</td>
                             <td>Suhu dan Kalor</td>
-                            <td>Sifat Sifat</td>
-                            <td>content submodul</td>
-                            <td>
-                                <MDBBtn outline="success">
-                                    <MDBIcon icon="edit" />
-                                </MDBBtn>
-                                <MDBBtn class="red-maroon" outline="light">
-                                    <MDBIcon icon="trash" />
-                                </MDBBtn>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Fisika</td>
-                            <td>XI</td>
-                            <td>Suhu dan Kalor</td>
-                            <td>Sifat Sifat</td>
-                            <td>content submodul</td>
-                            <td>
-                                <MDBBtn outline="success">
-                                    <MDBIcon icon="edit" />
-                                </MDBBtn>
-                                <MDBBtn class="red-maroon" outline="light">
-                                    <MDBIcon icon="trash" />
-                                </MDBBtn>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Fisika</td>
-                            <td>XI</td>
-                            <td>Suhu dan Kalor</td>
-                            <td>Sifat Sifat</td>
-                            <td>content submodul</td>
-                            <td>
-                                <MDBBtn outline="success">
-                                    <MDBIcon icon="edit" />
-                                </MDBBtn>
-                                <MDBBtn class="red-maroon" outline="light">
-                                    <MDBIcon icon="trash" />
-                                </MDBBtn>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Fisika</td>
-                            <td>XI</td>
-                            <td>Suhu dan Kalor</td>
-                            <td>Sifat Sifat</td>
-                            <td>content submodul</td>
-                            <td>
-                                <MDBBtn outline="success">
-                                    <MDBIcon icon="edit" />
-                                </MDBBtn>
-                                <MDBBtn class="red-maroon" outline="light">
-                                    <MDBIcon icon="trash" />
-                                </MDBBtn>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Fisika</td>
-                            <td>XI</td>
-                            <td>Suhu dan Kalor</td>
-                            <td>Sifat Sifat</td>
-                            <td>content submodul</td>
                             <td>
                                 <MDBBtn outline="success">
                                     <MDBIcon icon="edit" />
@@ -108,13 +39,26 @@
 </template>
 
 <script>
-  import { MDBIcon } from 'mdb-vue-ui-kit';
-  import { MDBBtn } from "mdb-vue-ui-kit";
+import { MDBIcon } from 'mdb-vue-ui-kit';
+import { MDBBtn } from "mdb-vue-ui-kit";
+import axios from 'axios';
 
-  export default {
+export default {
     components: {
-      MDBIcon,
-      MDBBtn,
+        MDBIcon,
+        MDBBtn,
     },
-  };
+    data() {
+        return {
+            course: [],
+            moduls: []
+        }
+    },
+    async created() {
+        const response1 = await axios.get('http://localhost:8081/api/courses');
+        // const response2 = await axios.get('http://localhost:8081/api/moduls');
+        this.course = response1.data.data;
+        // this.moduls = response2.data.data;
+    }
+};
 </script>
