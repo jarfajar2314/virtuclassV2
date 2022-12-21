@@ -238,6 +238,7 @@ export default {
 
 				// redirect the user to the login page
 				alert("Form submitted successfully");
+				this.$router.push("/login");
 			} catch (error) {
 				// display an error message if there is a problem with the request
 				//alert(error.response.data.message)
