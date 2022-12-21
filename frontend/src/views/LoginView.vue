@@ -170,6 +170,16 @@ export default {
 				);
 				const user = await response.json();
 				const status = await response.status;
+				const siswaResponse = await fetch(
+					"http://localhost:8081/api/siswa/detail/" + user.id,
+					{
+						method: "GET",
+						headers: {
+							"Content-Type": "application/json",
+						},
+					}
+				);
+				const userD = await siswaResponse.json();
 				// const user = users.find(u => u.email === this.email && u.password === this.typePass);
 				if (status == 200) {
 					// login successful, redirect to protected page
@@ -178,17 +188,15 @@ export default {
 					this.setUserData = {
 						id: user.id,
 						email: user.email,
-						nama: user.name,
+						nama: user.nama,
 						isValidated: user.isValidated,
 					};
+
 					let dataCookie = {
 						accessToken: user.accessToken,
 						role: user.role,
 						userData: {
-							id: user.id,
-							email: user.email,
-							nama: user.name,
-							isValidated: user.isValidated,
+							...userD,
 						},
 					};
 					document.cookie =

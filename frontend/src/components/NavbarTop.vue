@@ -1,34 +1,21 @@
 <template>
-	<nav
-		class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5"
-		style="box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.1)"
-	>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top mb-5"
+		style="box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.1)">
 		<div class="container ps-4 pe-4">
 			<RouterLink class="navbar-brand" to="/">
 				<img :src="logoVirtu" alt="virtuclass-logo" />
 			</RouterLink>
-			<button
-				class="navbar-toggler"
-				type="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#navbarNav"
-				aria-controls="navbarNav"
-				aria-expanded="false"
-				aria-label="Toggle navigation"
-			>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item">
-						<RouterLink class="nav-link" to="/"
-							>Home&emsp;</RouterLink
-						>
+						<RouterLink class="nav-link" to="/">Home&emsp;</RouterLink>
 					</li>
 					<li class="nav-item">
-						<RouterLink class="nav-link" to="/course"
-							>Course&emsp;</RouterLink
-						>
+						<RouterLink class="nav-link" to="/course">Course&emsp;</RouterLink>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#about">About&emsp;</a>
@@ -37,58 +24,33 @@
 						<a class="nav-link" href="#faq">FAQ&emsp;</a>
 					</li>
 					<li class="nav-item" v-if="!sessionData">
-						<RouterLink class="nav-link" to="/login"
-							>Login&emsp;</RouterLink
-						>
+						<RouterLink class="nav-link" to="/guru/dashboard-nilai">Guru</RouterLink>
 					</li>
 					<li class="nav-item" v-if="!sessionData">
-						<RouterLink class="nav-link" to="/register"
-							>Sign Up&emsp;</RouterLink
-						>
+						<RouterLink class="nav-link" to="/login">Login&emsp;</RouterLink>
+					</li>
+					<li class="nav-item" v-if="!sessionData">
+						<RouterLink class="nav-link" to="/register">Sign Up&emsp;</RouterLink>
 					</li>
 					<li class="nav-item p-0" v-if="sessionData">
 						<div class="dropdown">
-							<button
-								class="btn"
-								type="button"
-								id="dropdownMenuButton1"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
-							>
-								<Icon
-									class="iconify"
-									style="font-size: 25px; color: black"
-									icon="healthicons:ui-user-profile-outline"
-								/>
+							<button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+								aria-expanded="false">
+								<Icon class="iconify" style="font-size: 25px; color: black"
+									icon="healthicons:ui-user-profile-outline" />
 							</button>
-							<div
-								class="dropdown-menu"
-								aria-labelledby="dropdownMenuButton1"
-							>
+							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 								<!-- Kasih kondisional login atau belum untuk tampilkan ini -->
-								<RouterLink
-									class="dropdown-item"
-									to="/user/profile"
-								>
-									<p>John Doe</p>
+								<RouterLink class="dropdown-item" to="/user/profile">
+									<p>{{ sessionData.userData.nama }}</p>
 								</RouterLink>
 								<span>
-									<Icon
-										style="color: white"
-										class="iconify-inline"
-										icon="carbon:logout"
-									/>
+									<Icon style="color: white" class="iconify-inline" icon="carbon:logout" />
 								</span>
 								<span class="ml-4">
-									<button
-										@click="logout"
-										class="btn btn-block text-light"
-										style="
-											background-color: #901311;
+									<button @click="logout" class="btn btn-block text-light" style="background-color: #901311;
 											text-transform: none;
-										"
-										>Keluar</button
-									>
+										">Keluar</button>
 								</span>
 							</div>
 						</div>
