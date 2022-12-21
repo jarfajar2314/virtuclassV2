@@ -29,7 +29,9 @@
                         <td>{{ i.email }}</td>
                         <td>{{ i.nomorTelp }}</td>
                         <td>
-                            <button name="detail" class="btn btn-outline-success text-success btn-sm">Detail</button>
+                            <RouterLink to="/guru/detail-nilai">
+                                <button name="detail" class="btn btn-outline-success text-success btn-sm">Detail</button>
+                            </RouterLink>
                         </td>
                     </tr>
                 </tbody>
