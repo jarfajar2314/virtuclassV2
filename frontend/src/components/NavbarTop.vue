@@ -70,7 +70,7 @@
 									class="dropdown-item"
 									to="/user/profile"
 								>
-									<p>John Doe</p>
+									<p>{{ sessionData.userData.nama }}</p>
 								</RouterLink>
 								<span>
 									<Icon
