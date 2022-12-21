@@ -42,7 +42,7 @@
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 								<!-- Kasih kondisional login atau belum untuk tampilkan ini -->
 								<RouterLink class="dropdown-item" to="/user/profile">
-									<p>John Doe</p>
+									<p>{{ sessionData.userData.nama }}</p>
 								</RouterLink>
 								<span>
 									<Icon style="color: white" class="iconify-inline" icon="carbon:logout" />
