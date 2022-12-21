@@ -34,6 +34,16 @@
                     </tbody>
                 </table>
             </div>
+            <div class="mb-5 mt-5 pt-3 pb-5">
+                <DataTable :data="localData" class="display">
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                        </tr>
+                    </thead>
+                </DataTable>
+            </div>
         </div>
     </div>
 </template>
