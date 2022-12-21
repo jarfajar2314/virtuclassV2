@@ -12,7 +12,7 @@ module.exports = function (app) {
 
 	app.get(
 		"/api/moduls",
-		[authJwt.verifyToken, authJwt.isStudent],
+		// [authJwt.verifyToken, authJwt.isStudent],
 		controller.getAll
 	);
 
